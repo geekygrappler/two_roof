@@ -1,4 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe Api::V1::ApiDocumentsController, type: :controller do
+RSpec.describe Api::V1::DocumentsApiController, type: :controller do
 end

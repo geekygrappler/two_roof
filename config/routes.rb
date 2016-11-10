@@ -6,8 +6,10 @@ Rails.application.routes.draw do
         scope '/v1', module: 'v1' do
             # documents route
             scope '/documents' do
+                post '/' => 'documents_api#create'
                 scope '/:id' do
                     get '/' => 'documents_api#show'
+                    patch '/' => 'documents_api#update'
                 end
             end
         end
