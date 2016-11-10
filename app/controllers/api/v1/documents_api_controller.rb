@@ -3,7 +3,7 @@ class Api::V1::DocumentsApiController < ApplicationController
         @document = Document.find(params[:id])
         respond_to do |format|
             format.json do
-                render json: @document, status: :ok
+                render json: @document, include: 'line_items', status: :ok
             end
         end
     end
